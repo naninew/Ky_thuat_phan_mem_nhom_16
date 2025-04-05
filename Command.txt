@@ -1,0 +1,10 @@
+.venv\Scripts\Activate.ps1
+fastapi dev main.py
+deactivate
+
+git add -A               
+git status
+git commit -m 'Demo Login page'
+git push
+
+https://tailscan.com/tailwind/sizing/min-width-class
