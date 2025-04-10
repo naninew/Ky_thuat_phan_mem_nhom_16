@@ -85,6 +85,8 @@ def Login_page(redirect_to: str = "/home") -> Optional[RedirectResponse]:
                             validation={
                                 "Input too long": lambda value: len(value) < 30
                             },
+                            password=True,
+                            password_toggle_button=True,
                         ).on(
                             "keydown.enter",
                             lambda: try_login(
@@ -126,6 +128,8 @@ def Login_page(redirect_to: str = "/home") -> Optional[RedirectResponse]:
                             "you typed: " + e.value
                         ),
                         validation={"Input too long": lambda value: len(value) < 20},
+                        password=True,
+                        password_toggle_button=True,
                     ).classes("w-1/2 items-center")
                     result_password = ui.label()
 
@@ -136,6 +140,8 @@ def Login_page(redirect_to: str = "/home") -> Optional[RedirectResponse]:
                             "you typed: " + e.value
                         ),
                         validation={"Input too long": lambda value: len(value) < 20},
+                        password=True,
+                        password_toggle_button=True,
                     ).classes("w-1/2 items-center")
                     result_confirm_password = ui.label()
 
